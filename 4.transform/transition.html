@@ -11,10 +11,19 @@
             height: 150px;
             background-color: lightblue;
             border: 1px solid black;
+
+           
             transition-property: width, height; /*트랜지션 대상 -가로, 세로*/
             transition-delay: 1s; /*지연 시간 n초 후에*/
-            transition-duration: 2s,1s; /*실행 시간 처음과 끝 각각 n초 동안*/
+            transition-duration: 2s,1s; /*실행 시간 */
             transition-timing-function: ease-in; /*속도 곡선*/
+ 
+
+
+             /*
+             아래와 같이 사용할 수 있음
+             transition: width 2s ease-in 1s,   height 1s ease-in 1s;
+             */
 
             /*
             ease : 처음에는 천천히 시작하고 점점 빨라지다가 마지막에 천천히 끝냄(기본)
@@ -23,14 +32,9 @@
             ease-out : 느리게 끝
             ease-in-out : 느리게 시작하고 느리게 끝
             cubic-bezier(n,n,n,n) : 배지 함수 정의 n값을 0~1시간만 사용
-
             transition : 속성, 실행시간, 실행형태, 지연시간을 🔴한꺼번에 쓸 수 있음
             */
 
-        }
-        .box1:hover{
-            width: 200px;
-            height: 200px;
         }
 
         .box2{
@@ -39,8 +43,19 @@
             height: 150px;
             background-color: orangered;
             border: 1px solid black;
-            transition: 2s ease-in-out;
+            transition: 2s;  /*  실행시간이 2초임*/
         }
+
+
+
+
+        .box1:hover{
+            width: 200px;
+            height: 200px;
+        }
+
+      
+
         .box2:hover{
             width: 200px;
             height: 200px;
