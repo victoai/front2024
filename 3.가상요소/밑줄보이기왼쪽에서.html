@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         .item{
+            width: 300px;
+            height: 30px;
+            border:1px solid black;
+            line-height: 30px;
+
+
+            position: relative;
+            
+         }
+
+
+         .item::after{
+            content: "";           
+            background-color: rgb(32, 134, 32);  
+            width: 5px;
+            height: 1px;
+            position: absolute;
+            bottom: 0px;
+            left:0px;            
+            transition:  0.3s  ; /*transition: width 0.3s ease-in-out;*/     
+         }
+
+         .item:hover::after {
+            width: 100%;
+         }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="item"> 가상요소 여렵지 않아요 !</div>
+</body>
+</html>

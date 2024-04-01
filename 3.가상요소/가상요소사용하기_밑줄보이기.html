@@ -28,7 +28,7 @@
       height: 2px;
       background-color: #c00e0e;
       /* 줄의 색상을 원하는 색상으로 변경해주세요. */
-      transition: width 0.3s ease-in-out; /*transition: width 0.3s ease-in-out;*/     
+      transition:  0.3s  ; /*transition: width 0.3s ease-in-out;*/     
     }
 
 
@@ -37,7 +37,7 @@
     }
 
 
-    .line {
+    .under-line {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -50,7 +50,7 @@
       transition:  0.3s  ;   /* transition: width 0.3s ease-in-out;*/
     }
 
-    .line-wrap:hover .line {
+    .line-wrap:hover .under-line {
       width: 100%;
     }
   </style>
@@ -70,7 +70,7 @@
   <p> 요소를 직접 만들어 사용하기</p>
    <div class="line-wrap">
      메뉴3
-    <div class="line"></div>
+    <div class="under-line"></div>
   </div>
 
 </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .item{
+            width: 300px;
+            height: 500px;
+            border:1px solid black;
+            position: relative;
+
+             /* 아래에 히든 부분  안보이게 하기*/
+            /* 크기를 넘어서는 영역은 보이지 않음 */
+            overflow: hidden;
+          
+        }
+
+
+        .hinfo{
+            height: 50px;
+            border:1px solid black;
+            width: 100%;
+            position: absolute;
+            bottom: -50px;
+            transition: 1s;
+            background-color: antiquewhite;
+        }
+
+
+        .item:hover  .hinfo{
+            transform: translateY(-50px);
+             
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="item">
+        <div class="hinfo">히든</div>
+    </div>
+</body>
+</html>

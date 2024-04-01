@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <style>
+
+        .icon{
+            width:25px ;
+            height:15px;
+            border:1px solid black;
+            position: relative;
+
+
+        }
+        .icon span{
+             background-color: #c91717;
+             height: 1px;
+             width: 100%;               
+             position: absolute;   /*  absolute 설정하면 크기를 줄 수 있다 */
+             transition: 0.3s; 
+              
+        }
+
+        
+
+        .icon span:nth-child(1) {
+            top: 0;
+        }
+        .icon span:nth-child(2) {
+            top: 50%;
+        }
+        .icon span:nth-child(3) {
+            top: 100%;
+        }
+
+
+
+        /* 아이콘 클릭했을 떄 */
+        .icon.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 50%;
+        }
+        .icon.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .icon.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 50%;
+        } 
+    </style>
+</head>
+<body>
+    
+
+    <div class="icon">
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <script>
+        $('.icon').click(function(){
+			$(this).toggleClass('active');		 
+		})
+    </script>
+</body>
+</html>
